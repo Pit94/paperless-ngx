@@ -243,7 +243,7 @@ class MailDocumentParser(DocumentParser):
             """
             if isinstance(text, list):
                 text = "\n".join([str(e) for e in text])
-            if type(text) != str:
+            if not isinstance(text, str):
                 text = str(text)
             text = escape(text)
             text = clean(text)
